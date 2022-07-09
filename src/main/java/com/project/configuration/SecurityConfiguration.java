@@ -20,6 +20,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected UserDetailsService userDetailsService() {
 
+        // This method allows you to set up the credentials of the Spring Security login page.
         List<UserDetails> users = new ArrayList<>();
         users.add(User.withDefaultPasswordEncoder()
                 .username("Emillard")
