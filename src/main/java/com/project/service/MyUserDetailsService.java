@@ -20,7 +20,7 @@ public class MyUserDetailsService implements UserDetailsService {
 
         User user = repository.findByUsername(username);
 
-        if (user==null) {
+        if (user == null) {
 
             throw new UsernameNotFoundException("User 404");
 
