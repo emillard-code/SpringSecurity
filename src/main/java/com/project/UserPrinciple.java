@@ -8,6 +8,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+// This class is used to help Spring Security decide how to extract the username / password from the object.
+// Various other configurations can also be controlled through here.
 public class UserPrinciple implements UserDetails {
 
     private User user;

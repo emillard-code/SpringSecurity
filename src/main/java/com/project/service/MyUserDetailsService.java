@@ -9,12 +9,15 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+// When autowired, this class can help load user details for the configuration class.
 @Service
 public class MyUserDetailsService implements UserDetailsService {
 
     @Autowired
     private UserRepository repository;
 
+    // This method uses the autowired repository to load the user data from the database.
+    // It does not need to be explicitly called, simply overriding and providing functionality is enough.
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
@@ -26,6 +29,9 @@ public class MyUserDetailsService implements UserDetailsService {
 
         }
 
+        // The UserDetails implementing class is how Spring Security knows how
+        // to extract the username and password values from the User object.
+        // It also has other settings that you can edit or enable/disable.
         return new UserPrinciple(user);
 
     }
