@@ -12,6 +12,7 @@
     <body>
 
         Welcome Coders...
+        <a href="/logout">logout</a>
 
     </body>
 
